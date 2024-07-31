@@ -1,0 +1,22 @@
+<form action="">
+  <input [(ngModel)]="nombre" type="text" name="nombre" placeholder="Nombre" />
+  <input
+    [(ngModel)]="empresa"
+    type="text"
+    name="compañia"
+    placeholder="Compañia"
+  />
+  <input
+    [(ngModel)]="fecha"
+    type="text"
+    name="fecha"
+    placeholder="Fecha de lanzamiento"
+  />
+  <input
+    [(ngModel)]="imagenUrl"
+    type="text"
+    name="imgenUrl"
+    placeholder="URL de la imagen"
+  />
+  <button (click)="crearConsola()">Crear</button>
+</form>

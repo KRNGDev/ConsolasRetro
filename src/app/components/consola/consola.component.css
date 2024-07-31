@@ -1,0 +1,60 @@
+.consola {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 200px; /* Ancho de la card */
+  border: 1px solid #ccc; /* Borde de la card */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.368); /* Sombra */
+  overflow: hidden; /* Para que la imagen no se salga de los bordes */
+  background-color: #fff; /* Fondo blanco */
+  margin: 10px auto; /* Centramos la card horizontalmente */
+}
+
+.imagen {
+  flex: 2; /* Toma el 50% del espacio disponible */
+}
+
+.imagen img {
+  width: 100%; /* Imagen ocupa todo el espacio de su contenedor */
+  max-height: 120px; /* Mantiene la proporción de la imagen */
+  display: block;
+}
+
+.datos {
+  flex: 2; /* Toma el 50% del espacio disponible */
+  list-style-type: none; /* Quitamos los puntos de la lista */
+  padding: 15px; /* Espacio interno para separar el contenido de los bordes */
+  margin: 0; /* Quitamos los márgenes */
+}
+
+.datos li {
+  margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+  font-size: 16px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+
+.datos li:last-child {
+  margin-bottom: 0; /* Quitamos el margen inferior del último elemento */
+}
+
+button {
+  width: 70%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

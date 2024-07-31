@@ -1,0 +1,23 @@
+<div class="consola">
+  <div class="imagen">
+    <img src="{{ consola?.imagenUrl }}" alt="" />
+  </div>
+  <div class="datos">
+    <li>
+      <h2>{{ consola?.nombre }}</h2>
+    </li>
+    <li>
+      <fieldset>
+        <legend>Año</legend>
+        {{ consola?.fecha }}
+      </fieldset>
+    </li>
+    <li>
+      <fieldset>
+        <legend>Compañia</legend>
+        {{ consola?.empresa }}
+      </fieldset>
+    </li>
+  </div>
+  <button (click)="eliminarConsola(index)">Eliminar</button>
+</div>
