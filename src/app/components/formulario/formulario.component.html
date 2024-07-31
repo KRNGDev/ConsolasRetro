@@ -1,5 +1,11 @@
-<form action="">
-  <input [(ngModel)]="nombre" type="text" name="nombre" placeholder="Nombre" />
+<!--<form action="">
+  <input
+    matInput
+    [(ngModel)]="nombre"
+    type="text"
+    name="nombre"
+    placeholder="Nombre"
+  />
   <input
     [(ngModel)]="empresa"
     type="text"
@@ -18,5 +24,60 @@
     name="imgenUrl"
     placeholder="URL de la imagen"
   />
-  <button (click)="crearConsola()">Crear</button>
+  <button mat-flat-button (click)="crearConsola()">Crear</button>
+</form>-->
+<form class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input
+            matInput
+            [(ngModel)]="nombre"
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+          />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Genero</mat-label>
+          <input
+            matInput
+            [(ngModel)]="empresa"
+            type="text"
+            name="compañia"
+            placeholder="Compañia"
+          />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>URL de la imagen</mat-label>
+          <input
+            matInput
+            [(ngModel)]="imagenUrl"
+            type="text"
+            name="imgenUrl"
+            placeholder="URL de la imagen"
+          />
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label> Fecha lanzamiento</mat-label>
+          <input matInput [(ngModel)]="fecha" type="text" name="fecha" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <button mat-flat-button (click)="crearConsola()">Crear</button>
 </form>

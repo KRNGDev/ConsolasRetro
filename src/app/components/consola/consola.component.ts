@@ -1,11 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { Consola } from '../../interface/consola';
 import { ConsolaserviceService } from '../../service/consolaservice.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 @Component({
   selector: 'app-consola',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, MatCardModule],
   templateUrl: './consola.component.html',
   styleUrl: './consola.component.css'
 })

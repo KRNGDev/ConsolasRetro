@@ -4,11 +4,12 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ConsolaComponent } from './components/consola/consola.component';
 import { ConsolaserviceService } from './service/consolaservice.service';
 import { CommonModule } from '@angular/common';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ConsolaComponent, FormularioComponent],
+  imports: [RouterOutlet, MatSlideToggleModule, CommonModule, ConsolaComponent, FormularioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

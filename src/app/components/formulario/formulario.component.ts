@@ -3,11 +3,14 @@ import { ConsolaserviceService } from '../../service/consolaservice.service';
 import { Consola } from '../../interface/consola';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, MatGridListModule, MatInputModule, MatButtonModule, FormsModule],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })

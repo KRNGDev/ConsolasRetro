@@ -1,10 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Consola } from '../interface/consola';
+//para la comunicacion HTTP
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConsolaserviceService {
+
+  static httpHeaders = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  };
+  static URL: string = "https://test2prueba.free.beeceptor.com";
+  static PATH = "/todos";
+
+  constructor(private clienteHttp: HttpClient) {
+    this.load();
+    this.clienteHttp.get<Consola[]>(`${ConsolaserviceService.URL}${ConsolaserviceService.PATH}`)
+      .forEach(data => {
+        data.forEach(consola => {
+          this.consolas.push(consola);
+        });
+      })
+  }
 
   consolas: Consola[] = [];
 
@@ -30,9 +51,7 @@ export class ConsolaserviceService {
   }
 
   private static LS_KEY = "consolas";
-  constructor() {
-    this.load();
-  }
+
   public load() {
     const data = localStorage.getItem(ConsolaserviceService.LS_KEY);
     if (data != null) {

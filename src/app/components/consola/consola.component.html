@@ -1,4 +1,4 @@
-<div class="consola">
+<!--<div class="consola">
   <div class="imagen">
     <img src="{{ consola?.imagenUrl }}" alt="" />
   </div>
@@ -19,5 +19,24 @@
       </fieldset>
     </li>
   </div>
-  <button (click)="eliminarConsola(index)">Eliminar</button>
-</div>
+  <button mat-raised-button (click)="eliminarConsola(index)">Eliminar</button>
+</div>-->
+
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title> {{ consola?.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{ consola?.empresa }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ consola?.fecha }}</mat-card-subtitle>
+
+      <img
+        mat-card-sm-image
+        src="{{ consola?.imagenUrl }}"
+        alt="Image consola"
+      />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-raised-button (click)="eliminarConsola(index)">Eliminar</button>
+  </mat-card-content>
+</mat-card>
