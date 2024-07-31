@@ -38,3 +38,6 @@
 .datos li:last-child {
   margin-bottom: 0; /* Quitamos el margen inferior del último elemento */
 }
+.card {
+  width: 350px;
+}

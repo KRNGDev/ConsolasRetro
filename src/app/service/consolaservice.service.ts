@@ -14,8 +14,8 @@ export class ConsolaserviceService {
       'Content-Type': 'application/json',
     })
   };
-  static URL: string = "https://test2prueba.free.beeceptor.com";
-  static PATH = "/todos";
+  static URL: string = "https://krngdev.github.io";
+  static PATH = "/datos.json";
 
   constructor(private clienteHttp: HttpClient) {
     this.load();
