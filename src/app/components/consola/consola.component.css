@@ -41,3 +41,7 @@
 .card {
   width: 350px;
 }
+.botones{
+  display: flex;
+  justify-content: space-between;
+}

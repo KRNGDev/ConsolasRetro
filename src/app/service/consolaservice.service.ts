@@ -14,8 +14,8 @@ export class ConsolaserviceService {
       'Content-Type': 'application/json',
     })
   };
-  static URL: string = "https://krngdev.github.io";
-  static PATH = "/datos.json";
+  static URL: string = "https://api.game.albertolopma.top";
+  static PATH = "/games";
 
   constructor(private clienteHttp: HttpClient) {
     this.load();
@@ -37,7 +37,7 @@ export class ConsolaserviceService {
       console.log("en el if");
       this.consolas.splice(indice, 1);
       console.log(this.consolas);
-      this.save();
+     //this.save();
     }
     else {
       console.log(`No se encontró un objeto con el nombre "${index}".`);
@@ -47,7 +47,7 @@ export class ConsolaserviceService {
   }
   agregarConsola(consola: Consola) {
     this.consolas.push(consola);
-    this.save()
+    //this.save()
   }
 
   private static LS_KEY = "consolas";
