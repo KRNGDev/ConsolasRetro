@@ -14,8 +14,8 @@ export class ConsolaserviceService {
       'Content-Type': 'application/json',
     })
   };
-  static URL: string = "https://krngdev.github.io";
-  static PATH = "/datos.json";
+  static URL: string = "https://api.game.albertolopma.top";
+  static PATH = "/games";
 
   constructor(private clienteHttp: HttpClient) {
     this.load();
