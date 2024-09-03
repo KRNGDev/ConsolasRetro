@@ -28,17 +28,18 @@
       <mat-card-title>
         <p>{{ consola?.nombre }}</p></mat-card-title
       >
-      <mat-card-subtitle>{{ consola?.empresa }}</mat-card-subtitle>
-      <mat-card-subtitle>{{ consola?.fecha }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ consola?.distribuidor?.nombre}}</mat-card-subtitle>
+      <mat-card-subtitle>{{ consola?.ano_salida }}</mat-card-subtitle>
 
       <img
         mat-card-lg-image
-        src="{{ consola?.imagenUrl }}"
+        src="{{ consola?.imagenurl }}"
         alt="Image consola"
       />
     </mat-card-title-group>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content class="botones">
     <button mat-raised-button (click)="eliminarConsola(index)">Eliminar</button>
+    <button mat-raised-button (click)="eliminarConsola(index)">Editar</button>
   </mat-card-content>
 </mat-card>

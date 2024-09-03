@@ -37,7 +37,7 @@ export class ConsolaserviceService {
       console.log("en el if");
       this.consolas.splice(indice, 1);
       console.log(this.consolas);
-      this.save();
+     //this.save();
     }
     else {
       console.log(`No se encontró un objeto con el nombre "${index}".`);
@@ -47,7 +47,7 @@ export class ConsolaserviceService {
   }
   agregarConsola(consola: Consola) {
     this.consolas.push(consola);
-    this.save()
+    //this.save()
   }
 
   private static LS_KEY = "consolas";
